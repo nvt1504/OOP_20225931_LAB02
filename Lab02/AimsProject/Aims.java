@@ -1,35 +1,33 @@
-public class Aims {
+public class ShoppingCartDemo {
     public static void main(String[] args) {
-        // Tạo giỏ hàng mới
-        Cart cart = new Cart();
+        // Create a new shopping cart
+        ShoppingCart shoppingCart = new ShoppingCart();
 
-        // Tạo một số DVD mới
-        DigitalVideoDisc dvd1 = new DigitalVideoDisc("Inception", "Sci-Fi", 19.99f);
-        DigitalVideoDisc dvd2 = new DigitalVideoDisc("Christopher Nolan", "Sci-Fi", "Inception", 19.99f);
-        DigitalVideoDisc dvd3 = new DigitalVideoDisc("001", "Inception", "Sci-Fi", 19.99f, "Christopher Nolan", 148);
+        // Create some new DVDs
+        DigitalVideoDisc movie1 = new DigitalVideoDisc("Inception", "Sci-Fi", 19.99f);
+        DigitalVideoDisc movie2 = new DigitalVideoDisc("Interstellar", "Sci-Fi", "Christopher Nolan", 19.99f);
+        DigitalVideoDisc movie3 = new DigitalVideoDisc("Dunkirk", "War", "Christopher Nolan", 19.99f, "Christopher Nolan", 107);
 
+        // Add DVDs to the shopping cart
+        shoppingCart.addDVD(movie1);
+        shoppingCart.addDVD(movie2);
+        shoppingCart.addDVD(movie3);
+        // shoppingCart.addDVD(movie4); // Uncomment to add more DVDs
 
-
-        // Thêm DVD vào giỏ hàng
-        cart.addDVD(dvd1);
-        cart.addDVD(dvd2);
-        cart.addDVD(dvd3);
-//        cart.addDVD(dvd4);
-
-        // Hiển thị nội dung giỏ hàng trước khi xóa
+        // Display cart contents before removal
         System.out.println("Before removing a DVD:");
-        cart.displayItems();
+        shoppingCart.displayItems();
 
-        // Xóa một DVD khỏi giỏ hàng
-        boolean isRemoved = cart.removeDVD(dvd2);
-        if (isRemoved) {
-            System.out.println("DVD \"" + dvd2.getTitle() + "\" has been removed from the cart.");
+        // Remove a DVD from the shopping cart
+        boolean dvdRemoved = shoppingCart.removeDVD(movie2);
+        if (dvdRemoved) {
+            System.out.println("DVD \"" + movie2.getTitle() + "\" has been removed from the shopping cart.");
         } else {
-            System.out.println("DVD \"" + dvd2.getTitle() + "\" could not be found in the cart.");
+            System.out.println("DVD \"" + movie2.getTitle() + "\" could not be found in the shopping cart.");
         }
 
-        // Hiển thị nội dung giỏ hàng sau khi xóa
+        // Display cart contents after removal
         System.out.println("After removing a DVD:");
-        cart.displayItems();
+        shoppingCart.displayItems();
     }
 }
