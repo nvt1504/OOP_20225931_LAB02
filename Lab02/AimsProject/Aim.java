@@ -18,6 +18,8 @@ public class Aim {
         System.out.println("Before removing a DVD:");
         Cart.showItems();
 
+        System.out.println("Total DVDs created: " + DigitalVideoDisc.getNbDigitalVideoDiscs());
+
         // Remove a DVD from the  cart
         boolean dvdRemoved = Cart.removeDisc(movie2);
         if (dvdRemoved) {
@@ -25,9 +27,10 @@ public class Aim {
         } else {
             System.out.println("DVD \"" + movie2.getTitle() + "\" could not be found in the  cart.");
         }
-
+        
         // Display cart contents after removal
         System.out.println("After removing a DVD:");
         Cart.showItems();
     }
 }
+

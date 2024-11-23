@@ -1,4 +1,5 @@
 public class DigitalVideoDisc {
+    private static int nbDigitalVideoDiscs = 0;  // Thêm thuộc tính lớp để đếm số lượng DVD đã tạo
     private String id;
     private String title;
     private String category;
@@ -9,6 +10,7 @@ public class DigitalVideoDisc {
     // Constructor with title only
     public DigitalVideoDisc(String title) {
         this.title = title;
+        this.id = "DVD" + (++nbDigitalVideoDiscs);  // Cập nhật id và tăng số lượng DVD
     }
 
     // Constructor with title, category, and price
@@ -16,6 +18,7 @@ public class DigitalVideoDisc {
         this.title = title;
         this.category = category;
         this.price = price;
+        this.id = "DVD" + (++nbDigitalVideoDiscs);  // Cập nhật id và tăng số lượng DVD
     }
 
     // Constructor with director, category, title, and price
@@ -24,11 +27,12 @@ public class DigitalVideoDisc {
         this.category = category;
         this.title = title;
         this.price = price;
+        this.id = "DVD" + (++nbDigitalVideoDiscs);  // Cập nhật id và tăng số lượng DVD
     }
 
     // Full constructor
     public DigitalVideoDisc(String id, String title, String category, float price, String director, int duration) {
-        this.id = id;
+        this.id = "DVD" + (++nbDigitalVideoDiscs);  // Cập nhật id và tăng số lượng DVD
         this.title = title;
         this.category = category;
         this.price = price;
@@ -87,6 +91,7 @@ public class DigitalVideoDisc {
 
     // Method to display DVD information
     public void showInfo() {
+        System.out.println("DVD ID: " + this.id);  // Hiển thị ID của DVD
         System.out.println("DVD Title: " + (this.title != null ? this.title : "N/A"));
         System.out.println("Category: " + (this.category != null ? this.category : "N/A"));
         System.out.println("Price: $" + this.price);
@@ -119,4 +124,11 @@ public class DigitalVideoDisc {
         }
         return true;
     }
+
+    // Getter for nbDigitalVideoDiscs
+    public static int getNbDigitalVideoDiscs() {
+        return nbDigitalVideoDiscs;
+    }
+
+    
 }
