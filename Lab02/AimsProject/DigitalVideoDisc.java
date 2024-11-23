@@ -1,41 +1,42 @@
-public class DigitalVideoDisc {
+public class DVD {
     private String id;
     private String title;
     private String category;
-    private float cost;
+    private float price;
     private String director;
-    private int length;
+    private int duration;
 
-    public DigitalVideoDisc(String title) {
-        super();
+    // Constructor with title only
+    public DVD(String title) {
         this.title = title;
     }
 
-    public DigitalVideoDisc(String title, String category, float cost) {
-        super();
+    // Constructor with title, category, and price
+    public DVD(String title, String category, float price) {
         this.title = title;
         this.category = category;
-        this.cost = cost;
+        this.price = price;
     }
 
-    public DigitalVideoDisc(String director, String category, String title, float cost) {
-        super();
+    // Constructor with director, category, title, and price
+    public DVD(String director, String category, String title, float price) {
         this.director = director;
         this.category = category;
         this.title = title;
-        this.cost = cost;
+        this.price = price;
     }
 
-    public DigitalVideoDisc(String id, String title, String category, float cost, String director, int length) {
-        super();
+    // Full constructor
+    public DVD(String id, String title, String category, float price, String director, int duration) {
         this.id = id;
         this.title = title;
         this.category = category;
-        this.cost = cost;
+        this.price = price;
         this.director = director;
-        this.length = length;
+        this.duration = duration;
     }
 
+    // Getters and Setters
     public String getId() {
         return id;
     }
@@ -60,12 +61,12 @@ public class DigitalVideoDisc {
         this.category = category;
     }
 
-    public float getCost() {
-        return cost;
+    public float getPrice() {
+        return price;
     }
 
-    public void setCost(float cost) {
-        this.cost = cost;
+    public void setPrice(float price) {
+        this.price = price;
     }
 
     public String getDirector() {
@@ -76,39 +77,44 @@ public class DigitalVideoDisc {
         this.director = director;
     }
 
-    public int getLength() {
-        return length;
+    public int getDuration() {
+        return duration;
     }
 
-    public void setLength(int length) {
-        this.length = length;
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
 
-    public void displayInfo() {
-        System.out.println("The title of DVD is: " + (this.title != null ? this.title : "N/A"));
+    // Method to display DVD information
+    public void showInfo() {
+        System.out.println("DVD Title: " + (this.title != null ? this.title : "N/A"));
         System.out.println("Category: " + (this.category != null ? this.category : "N/A"));
-        System.out.println("Cost: $" + this.cost);
+        System.out.println("Price: $" + this.price);
         System.out.println("Director: " + (this.director != null ? this.director : "N/A"));
-        System.out.println("Length: " + (this.length > 0 ? this.length + " minutes" : "N/A"));
+        System.out.println("Duration: " + (this.duration > 0 ? this.duration + " minutes" : "N/A"));
     }
 
-    public boolean checkLength() {
-        return (this.length > 0);
+    // Check if the duration is valid
+    public boolean isValidDuration() {
+        return (this.duration > 0);
     }
 
-    public boolean matchesTitle(String searchTitle) {
-        return title.toLowerCase().contains(searchTitle.toLowerCase());
+    // Check if the title matches a given search term
+    public boolean matchesTitle(String searchTerm) {
+        return title.toLowerCase().contains(searchTerm.toLowerCase());
     }
 
+    // Check if the category matches
     public boolean matchesCategory(String searchCategory) {
         return category.equalsIgnoreCase(searchCategory);
     }
 
-    public boolean matchesPrice(Float minPrice, Float maxPrice) {
-        if (minPrice != null && cost < minPrice) {
+    // Check if the price is within a specified range
+    public boolean isWithinPriceRange(Float minPrice, Float maxPrice) {
+        if (minPrice != null && price < minPrice) {
             return false;
         }
-        if (maxPrice != null && cost > maxPrice) {
+        if (maxPrice != null && price > maxPrice) {
             return false;
         }
         return true;
