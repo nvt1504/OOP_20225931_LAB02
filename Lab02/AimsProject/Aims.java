@@ -1,7 +1,7 @@
-public class ShoppingCartDemo {
+public class CartDemo {
     public static void main(String[] args) {
-        // Create a new shopping cart
-        ShoppingCart shoppingCart = new ShoppingCart();
+        // Create a new  cart
+        ShoppingCart Cart = new ShoppingCart();
 
         // Create some new DVDs
         DigitalVideoDisc movie1 = new DigitalVideoDisc("Inception", "Sci-Fi", 19.99f);
