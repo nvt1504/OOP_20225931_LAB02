@@ -1,5 +1,5 @@
 public class StoreTest {
-    // // fixed branch
+    // fixed branch
     public static void main(String[] args) {
         // Tạo cửa hàng với sức chứa tối đa là 5 DVD
         Store store = new Store(5);
