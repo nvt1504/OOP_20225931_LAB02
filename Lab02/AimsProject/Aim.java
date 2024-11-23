@@ -18,7 +18,7 @@ public class Aim {
         System.out.println("Before removing a DVD:");
         Cart.showItems();
 
-        System.out.println("Total DVDs created: " + DigitalVideoDisc.getNbDigitalVideoDiscs());
+        Cart.printCartDetails();
 
         // Remove a DVD from the  cart
         boolean dvdRemoved = Cart.removeDisc(movie2);

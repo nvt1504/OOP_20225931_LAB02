@@ -5,7 +5,7 @@ public class DigitalVideoDisc {
     private String category;
     private float price;
     private String director;
-    private int duration;
+    private int length;
 
     // Constructor with title only
     public DigitalVideoDisc(String title) {
@@ -31,13 +31,13 @@ public class DigitalVideoDisc {
     }
 
     // Full constructor
-    public DigitalVideoDisc(String id, String title, String category, float price, String director, int duration) {
+    public DigitalVideoDisc(String id, String title, String category, float price, String director, int length) {
         this.id = "DVD" + (++nbDigitalVideoDiscs);  // Cập nhật id và tăng số lượng DVD
         this.title = title;
         this.category = category;
         this.price = price;
         this.director = director;
-        this.duration = duration;
+        this.length = length;
     }
 
     // Getters and Setters
@@ -81,12 +81,12 @@ public class DigitalVideoDisc {
         this.director = director;
     }
 
-    public int getDuration() {
-        return duration;
+    public int getLength() {
+        return length;
     }
 
-    public void setDuration(int duration) {
-        this.duration = duration;
+    public void setlength(int length) {
+        this.length = length;
     }
 
     // Method to display DVD information
@@ -96,12 +96,12 @@ public class DigitalVideoDisc {
         System.out.println("Category: " + (this.category != null ? this.category : "N/A"));
         System.out.println("Price: $" + this.price);
         System.out.println("Director: " + (this.director != null ? this.director : "N/A"));
-        System.out.println("Duration: " + (this.duration > 0 ? this.duration + " minutes" : "N/A"));
+        System.out.println("length: " + (this.length > 0 ? this.length + " minutes" : "N/A"));
     }
 
-    // Check if the duration is valid
-    public boolean isValidDuration() {
-        return (this.duration > 0);
+    // Check if the length is valid
+    public boolean isValidlength() {
+        return (this.length > 0);
     }
 
     // Check if the title matches a given search term

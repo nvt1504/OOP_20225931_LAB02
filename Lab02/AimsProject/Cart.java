@@ -92,5 +92,21 @@ public class Cart {
         }
     }
 
+    public void printCartDetails() {
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:");
+        if (dvdList.isEmpty()) {
+            System.out.println("Giỏ hàng hiện tại trống.");
+        } else {
+            int count = 1;
+            for (DigitalVideoDisc disc : dvdList) {
+                System.out.println(count + ". DVD - " + disc.getTitle() + " - " + disc.getCategory() + " - " 
+                    + disc.getDirector() + " - " + disc.getLength() + " minutes: $" + disc.getPrice());
+                count++;
+            }
+        }
+        System.out.println("Total cost: $" + calculateTotalPrice());
+        System.out.println("***************************************************");
+    }
     
 }
