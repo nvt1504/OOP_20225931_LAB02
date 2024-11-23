@@ -35,7 +35,7 @@ public class Cart {
     public float calculateTotalPrice() {
         float totalPrice = 0;
         for (DigitalVideoDisc disc : dvdList) {
-            totalPrice += disc.getCost();
+            totalPrice += disc.getPrice();
         }
         return totalPrice;
     }
@@ -43,7 +43,7 @@ public class Cart {
     public void showItems() {
         System.out.println("Giỏ hàng có " + dvdList.size() + " DVD:");
         for (DigitalVideoDisc disc : dvdList) {
-            disc.displayInfo();
+            disc.showInfo();
             System.out.println();
         }
         System.out.println("Tổng giá: $" + calculateTotalPrice());

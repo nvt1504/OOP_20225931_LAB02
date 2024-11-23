@@ -1,33 +1,33 @@
 public class CartDemo {
     public static void main(String[] args) {
         // Create a new  cart
-        ShoppingCart Cart = new ShoppingCart();
+        Cart Cart = new Cart();
 
         // Create some new DVDs
         DigitalVideoDisc movie1 = new DigitalVideoDisc("Inception", "Sci-Fi", 19.99f);
         DigitalVideoDisc movie2 = new DigitalVideoDisc("Interstellar", "Sci-Fi", "Christopher Nolan", 19.99f);
         DigitalVideoDisc movie3 = new DigitalVideoDisc("Dunkirk", "War", "Christopher Nolan", 19.99f, "Christopher Nolan", 107);
 
-        // Add DVDs to the shopping cart
-        shoppingCart.addDVD(movie1);
-        shoppingCart.addDVD(movie2);
-        shoppingCart.addDVD(movie3);
-        // shoppingCart.addDVD(movie4); // Uncomment to add more DVDs
+        // Add DVDs to the  cart
+        Cart.addDisc(movie1);
+        Cart.addDisc(movie2);
+        Cart.addDisc(movie3);
+        // Cart.addDVD(movie4); // Uncomment to add more DVDs
 
         // Display cart contents before removal
         System.out.println("Before removing a DVD:");
-        shoppingCart.displayItems();
+        Cart.showItems();
 
-        // Remove a DVD from the shopping cart
-        boolean dvdRemoved = shoppingCart.removeDVD(movie2);
+        // Remove a DVD from the  cart
+        boolean dvdRemoved = Cart.removeDisc(movie2);
         if (dvdRemoved) {
-            System.out.println("DVD \"" + movie2.getTitle() + "\" has been removed from the shopping cart.");
+            System.out.println("DVD \"" + movie2.getTitle() + "\" has been removed from the  cart.");
         } else {
-            System.out.println("DVD \"" + movie2.getTitle() + "\" could not be found in the shopping cart.");
+            System.out.println("DVD \"" + movie2.getTitle() + "\" could not be found in the  cart.");
         }
 
         // Display cart contents after removal
         System.out.println("After removing a DVD:");
-        shoppingCart.displayItems();
+        Cart.showItems();
     }
 }

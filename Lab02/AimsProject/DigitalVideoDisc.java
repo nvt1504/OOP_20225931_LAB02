@@ -1,4 +1,4 @@
-public class DVD {
+public class DigitalVideoDisc {
     private String id;
     private String title;
     private String category;
@@ -7,19 +7,19 @@ public class DVD {
     private int duration;
 
     // Constructor with title only
-    public DVD(String title) {
+    public DigitalVideoDisc(String title) {
         this.title = title;
     }
 
     // Constructor with title, category, and price
-    public DVD(String title, String category, float price) {
+    public DigitalVideoDisc(String title, String category, float price) {
         this.title = title;
         this.category = category;
         this.price = price;
     }
 
     // Constructor with director, category, title, and price
-    public DVD(String director, String category, String title, float price) {
+    public DigitalVideoDisc(String director, String category, String title, float price) {
         this.director = director;
         this.category = category;
         this.title = title;
@@ -27,7 +27,7 @@ public class DVD {
     }
 
     // Full constructor
-    public DVD(String id, String title, String category, float price, String director, int duration) {
+    public DigitalVideoDisc(String id, String title, String category, float price, String director, int duration) {
         this.id = id;
         this.title = title;
         this.category = category;
