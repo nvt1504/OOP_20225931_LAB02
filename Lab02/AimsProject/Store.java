@@ -1,4 +1,5 @@
 public class Store {
+    // fixed branch
     private DigitalVideoDisc[] itemsInStore;
     private int currentCount;
 
