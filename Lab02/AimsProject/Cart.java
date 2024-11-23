@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
-public class ShoppingCart {
+public class Cart {
     private ArrayList<DigitalVideoDisc> dvdList;
     private final int capacity;
 
-    public ShoppingCart() {
+    public Cart() {
         this.dvdList = new ArrayList<>();
         this.capacity = 20; // Giới hạn tối đa cho giỏ hàng
     }
