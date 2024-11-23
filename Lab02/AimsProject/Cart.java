@@ -48,4 +48,49 @@ public class Cart {
         }
         System.out.println("Tổng giá: $" + calculateTotalPrice());
     }
+
+    //overloading
+    public void addDisc(DigitalVideoDisc[] dvdList) {
+        for (DigitalVideoDisc disc : dvdList) {
+            if (this.dvdList.size() < capacity) {
+                this.dvdList.add(disc);
+                System.out.println("DVD \"" + disc.getTitle() + "\" đã được thêm vào giỏ hàng.");
+            } else {
+                System.out.println("Giỏ hàng đã đầy, không thể thêm DVD \"" + disc.getTitle() + "\".");
+                break; // Dừng lại nếu giỏ hàng đầy
+            }
+        }
+    }
+    
+    // method allows to pass an arbitrary number of arguments for dvd.
+    // public void addDisc(DigitalVideoDisc... dvdArray) {
+    //     for (DigitalVideoDisc disc : dvdArray) {
+    //         if (this.dvdList.size() < capacity) {
+    //             this.dvdList.add(disc);
+    //             System.out.println("DVD \"" + disc.getTitle() + "\" đã được thêm vào giỏ hàng.");
+    //         } else {
+    //             System.out.println("Giỏ hàng đã đầy, không thể thêm DVD \"" + disc.getTitle() + "\".");
+    //             break; // Dừng lại nếu giỏ hàng đầy
+    //         }
+    //     }
+    // }
+    
+    public void addDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+        if (this.dvdList.size() < capacity) {
+            this.dvdList.add(dvd1);
+            System.out.println("DVD \"" + dvd1.getTitle() + "\" đã được thêm vào giỏ hàng.");
+        } else {
+            System.out.println("Giỏ hàng đã đầy, không thể thêm DVD \"" + dvd1.getTitle() + "\".");
+            return; // Nếu giỏ hàng đầy, không thêm DVD thứ hai
+        }
+
+        if (this.dvdList.size() < capacity) {
+            this.dvdList.add(dvd2);
+            System.out.println("DVD \"" + dvd2.getTitle() + "\" đã được thêm vào giỏ hàng.");
+        } else {
+            System.out.println("Giỏ hàng đã đầy, không thể thêm DVD \"" + dvd2.getTitle() + "\".");
+        }
+    }
+
+    
 }
