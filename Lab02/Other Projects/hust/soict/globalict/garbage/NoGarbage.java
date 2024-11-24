@@ -1,3 +1,5 @@
+package hust.soict.globalict.garbage;
+
 import java.io.*;
 
 public class NoGarbage {
