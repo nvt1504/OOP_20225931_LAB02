@@ -1,3 +1,8 @@
+package hust.soict.dsai.aims.cart;
+
+import hust.soict.dsai.aims.disc.DigitalVideoDisc; // Import lớp hust.soict.dsai.aims.disc.DigitalVideoDisc từ package disc
+import java.util.ArrayList; // Import lớp ArrayList cho danh sách DVD
+
 import java.util.ArrayList;
 
 public class Cart {
@@ -63,8 +68,8 @@ public class Cart {
     }
     
     // method allows to pass an arbitrary number of arguments for dvd.
-    // public void addDisc(DigitalVideoDisc... dvdArray) {
-    //     for (DigitalVideoDisc disc : dvdArray) {
+    // public void addDisc(hust.soict.dsai.aims.disc.DigitalVideoDisc... dvdArray) {
+    //     for (hust.soict.dsai.aims.disc.DigitalVideoDisc disc : dvdArray) {
     //         if (this.dvdList.size() < capacity) {
     //             this.dvdList.add(disc);
     //             System.out.println("DVD \"" + disc.getTitle() + "\" đã được thêm vào giỏ hàng.");
