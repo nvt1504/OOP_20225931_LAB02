@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class GarbageCreator {
     public static void main(String[] args) {
-        String filename = "hust/soict/globalict/garbage/text.txt"; // Đảm bảo tệp này tồn tại trong thư mục hiện tại hoặc sử dụng đường dẫn tuyệt đối
+        String filename = "hust/soict/dsai/garbage/text.txt"; // Đảm bảo tệp này tồn tại trong thư mục hiện tại hoặc sử dụng đường dẫn tuyệt đối
         byte[] inputBytes = new byte[0]; // Khai báo mảng byte
         long startTime, endTime;
         
