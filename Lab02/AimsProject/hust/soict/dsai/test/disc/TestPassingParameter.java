@@ -1,6 +1,10 @@
+package hust.soict.dsai.test.disc;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc; // Import lớp hust.soict.dsai.aims.disc.DigitalVideoDisc từ package disc
+
+
 public class TestPassingParameter {
     public static void main(String[] args) {
-        // Tạo các đối tượng DigitalVideoDisc
+        // Tạo các đối tượng hust.soict.dsai.aims.disc.DigitalVideoDisc
         DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle");
         DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Cinderella");
 
@@ -25,7 +29,7 @@ public class TestPassingParameter {
         System.out.println("jungle dvd title: " + jungleDVD.getTitle());
     }
 
-    // Phương thức swap hoán đổi tiêu đề của hai đối tượng DigitalVideoDisc
+    // Phương thức swap hoán đổi tiêu đề của hai đối tượng hust.soict.dsai.aims.disc.DigitalVideoDisc
     public static void swap(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
         String tmp = dvd1.getTitle();
         dvd1.setTitle(dvd2.getTitle());

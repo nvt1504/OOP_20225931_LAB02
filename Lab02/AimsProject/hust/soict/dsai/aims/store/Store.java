@@ -1,3 +1,7 @@
+package hust.soict.dsai.aims.store;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc; // Import lớp hust.soict.dsai.aims.disc.DigitalVideoDisc từ package disc
+
+
 public class Store {
     //  fixed branch
     private DigitalVideoDisc[] itemsInStore;

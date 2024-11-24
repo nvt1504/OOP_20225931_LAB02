@@ -1,3 +1,5 @@
+package hust.soict.dsai.aims.disc;
+
 public class DigitalVideoDisc {
     private static int nbDigitalVideoDiscs = 0;  // Thêm thuộc tính lớp để đếm số lượng DVD đã tạo
     private String id;
@@ -124,6 +126,16 @@ public class DigitalVideoDisc {
         }
         return true;
     }
+    // Constructor with title, category, director, length, and price
+    public DigitalVideoDisc(String title, String category, String director, int length, float price) {
+        this.title = title;
+        this.category = category;
+        this.director = director;
+        this.length = length;
+        this.price = price;
+        this.id = "DVD" + (++nbDigitalVideoDiscs); // Cập nhật id và tăng số lượng DVD
+    }
+
 
     // Getter for nbDigitalVideoDiscs
     public static int getNbDigitalVideoDiscs() {

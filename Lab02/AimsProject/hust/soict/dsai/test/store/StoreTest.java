@@ -1,3 +1,8 @@
+package hust.soict.dsai.test.store;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc; // Import lớp hust.soict.dsai.aims.disc.DigitalVideoDisc từ package disc
+
+import hust.soict.dsai.aims.store.Store;
+
 public class StoreTest {
     // fixed branch
     public static void main(String[] args) {
