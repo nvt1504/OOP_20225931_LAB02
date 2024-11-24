@@ -1,3 +1,5 @@
+package hust.soict.globalict.garbage;
+
 import java.util.Random;
 
 public class ConcatenationInLoops {
